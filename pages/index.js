@@ -4,7 +4,7 @@ export default function Home() {
   const [view, setView] = useState("welcome");
 
   return (
-    <div style={{ padding: 20, maxWidth: 800, margin: "auto" }}>
+    <div style={{ padding: 20, maxWidth: 800, margin: "auto", fontFamily: "Arial" }}>
 
       <h1 style={{ color: "#4f46e5" }}>Delego 🚀</h1>
 
@@ -13,7 +13,7 @@ export default function Home() {
           <h2>Welcome 👋</h2>
           <p>You have candidates ready to review</p>
 
-          <button onClick={() => setView("list")}>
+          <button onClick={() => setView("list")} style={{ padding: 10 }}>
             View Candidates
           </button>
         </div>
@@ -23,12 +23,12 @@ export default function Home() {
         <div>
           <h2>Top Candidates</h2>
 
-          <div style={{ border: "1px solid #ccc", padding: 10, marginBottom: 10 }}>
+          <div style={{ border: "1px solid #ddd", padding: 15, marginBottom: 10 }}>
             <p><strong>Score:</strong> 88</p>
             <p>Strong communicator with great organisation</p>
 
             <button onClick={() => setView("detail")}>
-              View
+              View Profile
             </button>
           </div>
         </div>
@@ -48,12 +48,12 @@ export default function Home() {
           <h3>Answers</h3>
           <pre>{JSON.stringify({ q1: "Example answer" }, null, 2)}</pre>
 
-          <button>Shortlist</button>
-          <button style={{ marginLeft: 10 }}>Reject</button>
+          <div style={{ marginTop: 10 }}>
+            <button>✅ Shortlist</button>
+            <button style={{ marginLeft: 10 }}>❌ Reject</button>
+          </div>
         </div>
       )}
-
     </div>
   );
 }
-``
